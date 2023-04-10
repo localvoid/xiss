@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "@xiss/map",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src",
+    "!dist/**/*.tsbuildinfo",
+    "!src/**/__tests__",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist ./tsconfig.tsbuildinfo"
+  },
+  "description": "xiss map loader.",
+  "license": "MIT",
+  "keywords": [
+    "xiss",
+    "css"
+  ],
+  "author": "Boris Kaul <localvoid@gmail.com> (https://github.com/localvoid)",
+  "homepage": "https://github.com/localvoid/xiss",
+  "bugs": "https://github.com/localvoid/xiss/issues",
+  "repository": "github:localvoid/xiss"
+}

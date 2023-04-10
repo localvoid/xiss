@@ -1,0 +1,16 @@
+**/.DS_Store
+
+.idea/
+.vscode/
+!.vscode/settings.json
+
+packages/**/dist
+/target
+*.mm_profdata
+node_modules
+coverage
+*.tsbuildinfo
+npm-debug.log
+
+.TODO
+examples

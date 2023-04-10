@@ -1,0 +1,16 @@
+*       text=auto
+
+*.sh    text eol=lf merge=union
+*.rs    text eol=lf merge=union
+*.js    text eol=lf merge=union
+*.mjs   text eol=lf merge=union
+*.ts    text eof=lf merge=union
+*.mts   text eof=lf merge=union
+*.toml  text eol=lf merge=union
+*.json  text eol=lf merge=union
+*.yaml  text eol=lf merge=union
+*.yml   text eol=lf merge=union
+*.md    text eol=lf merge=union
+*.css   text eol=lf merge=union
+*.html  text eol=lf merge=union
+*.csv   text eol=lf merge=union

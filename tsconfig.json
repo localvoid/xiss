@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/xiss" },
+    { "path": "packages/@xiss/rollup-plugin" },
+    { "path": "packages/@xiss/map" },
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

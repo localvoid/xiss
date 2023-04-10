@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "tsc -b",
+    "build:watch": "tsc -b -w --pretty",
+    "build:force": "tsc -b --force --pretty"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  },
+  "volta": {
+    "node": "19.8.0",
+    "pnpm": "8.1.0"
+  }
+}

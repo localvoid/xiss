@@ -1,0 +1,36 @@
+{
+  "name": "xiss-cli",
+  "version": "0.0.1",
+  "type": "module",
+  "bin": "dist/main.js",
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/main.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "//optionalDependencies": {
+    "@xiss/target-linux-x64": "workspace:*",
+    "@xiss/target-linux-arm64": "workspace:*",
+    "@xiss/target-darwin-x64": "workspace:*",
+    "@xiss/target-darwin-arm64": "workspace:*",
+    "@xiss/target-windows-x64": "workspace:*",
+    "@xiss/target-windows-arm64": "workspace:*"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist ./tsconfig.tsbuildinfo"
+  },
+  "description": "CSS compiler.",
+  "license": "MIT",
+  "keywords": [
+    "xiss",
+    "css"
+  ],
+  "author": "Boris Kaul <localvoid@gmail.com> (https://github.com/localvoid)",
+  "homepage": "https://github.com/localvoid/xiss",
+  "bugs": "https://github.com/localvoid/xiss/issues",
+  "repository": "github:localvoid/xiss"
+}

@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "name": "@xiss/rollup-plugin",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src",
+    "!dist/**/*.tsbuildinfo",
+    "!src/**/__tests__",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "rollup": "^3.20.2"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist ./tsconfig.tsbuildinfo"
+  },
+  "description": "xiss rollup plugin.",
+  "license": "MIT",
+  "keywords": [
+    "xiss",
+    "css",
+    "rollup-plugin"
+  ],
+  "author": "Boris Kaul <localvoid@gmail.com> (https://github.com/localvoid)",
+  "homepage": "https://github.com/localvoid/xiss",
+  "bugs": "https://github.com/localvoid/xiss/issues",
+  "repository": "github:localvoid/xiss"
+}

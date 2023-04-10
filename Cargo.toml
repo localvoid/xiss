@@ -1,0 +1,24 @@
+[workspace]
+members = ["crates/xiss", "crates/xiss-map"]
+
+[workspace.package]
+authors = ["Boris Kaul <localvoid@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/localvoid/xiss"
+homepage = "https://github.com/localvoid/xiss"
+edition = "2021"
+include = ["Cargo.toml", "LICENSE", "src/**/*.rs"]
+readme = "./README.md"
+
+[workspace.dependencies]
+smol_str = "0.1"
+regex = "1"
+rustc-hash = "1"
+thiserror = "1"
+
+[profile.release]
+lto = true
+opt-level = "z"
+
+[profile.dev.package.backtrace]
+opt-level = 3
