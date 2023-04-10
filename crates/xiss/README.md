@@ -2,24 +2,39 @@
 
 Experimental compiler for modular CSS written in Rust.
 
-## Supported ID types
+## Why?
 
-- Class names
+### [String Interning](https://en.wikipedia.org/wiki/String_interning)
+
+Instead of relying on bundler heuristics for inlining class names, xiss is generating TypeScript files with const enums. When TypeScript is compiled with `tsc`, all const enum strings will be inlined and minifier will be able to perform const evaluation and convert dynamic class name strings into interned strings.
+
+### Decoupling CSS compilation from JavaScript stack
+
+It seems that all modern toolchains are going towards a full-stack JavaScript direction. xiss decouples CSS compilation from JavaScript stack and is designed for projects that use differents stacks for dynamic Server-Side Rendering.
+
+Features like Code-Splitting is still the responsibility of a frontend toolchain stack. xiss just precompiles id maps, so that Server-Side stack will be able to use scoped minified ids.
+
+## Features
+
+### Module Scopes
+
+### ID Minification
+
+### ID Types
+
+- Class Names
 - Vars
 - Keyframes
 
-## Global IDs
+### Class Maps
 
-- Minification
-- Performance
+#### Format
 
-## Class Maps
-
-- Inline
+- Inline conditional expression
 - Table
 - Auto
 
-### Declaring states
+#### Declaring states
 
 ```css
 @classmap buttonClass {
@@ -28,7 +43,7 @@ Experimental compiler for modular CSS written in Rust.
 }
 ```
 
-### Declaring static class names with `@static`
+#### Declaring static class names with `@static`
 
 ```css
 @classmap buttonClass {
@@ -38,7 +53,7 @@ Experimental compiler for modular CSS written in Rust.
 }
 ```
 
-### Excluding states with exclude constraints `@exclude`
+#### Excluding states with exclude constraints `@exclude`
 
 ```css
 @classmap buttonClass {
@@ -51,14 +66,14 @@ Experimental compiler for modular CSS written in Rust.
 }
 ```
 
-## External IDs
+### External IDs
 
 ```css
 @extern class Button from 'xiss/buttons';
 @extern class Button as myButton from 'xiss/buttons';
 ```
 
-## Constants
+### Constants
 
 ```css
 :const {
@@ -68,7 +83,7 @@ Experimental compiler for modular CSS written in Rust.
 
 ## Exclude filters
 
-## CSS Map Files
+## CSS Map
 
 ### Format
 
